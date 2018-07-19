@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN"
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-lazy="false">
+	<class name="com.smart.domain.Tabled" table="tabled">
+		<id name="id" column="id">
+			<generator class="assigned" />
+		</id>
+		<property name="numValue" column="numValue" />
+		<property name="numTime" column="numTime" />
+		<property name="numOne" column="numOne" />
+		<property name="numTwo" column="numTwo" />
+		<property name="numThree" column="numThree" />
+		<property name="numFour" column="numFour" />
+		<property name="numFive" column="numFive" />
+		<property name="numSix" column="numSix" />
+		<property name="numSeven" column="numSeven" />
+		<property name="numEight" column="numEight" />
+		<property name="numNigne" column="numNigne" />
+		<property name="numTen" column="numTen" />
+		<property name="numDay" column="numDay" />
+		<property name="numFlag" column="numFlag" />
+	</class>
+</hibernate-mapping>

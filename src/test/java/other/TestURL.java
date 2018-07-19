@@ -1,6 +1,9 @@
 package other;
 
 import com.smart.dao.hibernate.ForumHibernateDao;
+import com.smart.dao.hibernate.TabledDao;
+import com.smart.domain.DataCount;
+import com.smart.domain.Tabled;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
@@ -10,6 +13,7 @@ import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.URL;
+import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -22,6 +26,32 @@ public class TestURL extends AbstractTestNGSpringContextTests {
 
     @Autowired
     private ForumHibernateDao forumHibernateDao;
+
+    @Autowired
+    private TabledDao tabledDao;
+
+    @Test
+    public void demo3(){
+        List<Tabled> list=tabledDao.getListByFlag(0);
+
+        Tabled first=list.get(0);
+        DataCount dataCount=new DataCount();
+        dataCount.setDataName(first.getNumOne());
+
+        String dataName=first.getNumOne();
+        int tempCount=1;
+        for (int i = 1; i < list.size(); i++) {
+            Tabled tabled=list.get(i);
+            if (tabled.getNumOne().equals(dataName)){
+                tempCount++;
+            }else {
+
+            }
+        }
+
+        System.out.println(list.size());
+    }
+
 
     @Test
     public void demo1(){
