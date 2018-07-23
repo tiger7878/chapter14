@@ -24,7 +24,8 @@ public class TestData extends AbstractTestNGSpringContextTests {
     @Test
     public void demo1(){
         List<DataCount> dataCounts=new ArrayList<>();
-        List<Tabled> list=tabledDao.getListByFlag(0);
+//        List<Tabled> list=tabledDao.getListByFlag(0);
+        List<Tabled> list=tabledDao.getListByFlag(1);
 
         Tabled first=list.get(0);
 
@@ -36,9 +37,10 @@ public class TestData extends AbstractTestNGSpringContextTests {
             Tabled tabled=list.get(i);
             if (tabled.getNumOne().equals(dataName)){
 
-                if(tempCount>1) {
+                if(tempCount>3) {
                     DataCount dataCount = new DataCount();
-                    dataCount.setDataName("dx");
+//                    dataCount.setDataName("dx");
+                    dataCount.setDataName("ds");
                     dataCount.setDataNum(tempCount);
                     dataCount.setDateTime(dataTime);
 
@@ -49,6 +51,7 @@ public class TestData extends AbstractTestNGSpringContextTests {
             }else {
                 tempCount++;
                 dataName=tabled.getNumOne();
+
                 dataTime=tabled.getNumTime();
             }
         }
