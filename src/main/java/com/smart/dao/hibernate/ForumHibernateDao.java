@@ -19,6 +19,9 @@ public class ForumHibernateDao extends BaseDao {
 
     public void addForum(Forum forum){
         getHibernateTemplate().save(forum);
+        //测试事务
+//        int i=0;
+//        int j=5/i;
     }
 
     public void updateForum(Forum forum){

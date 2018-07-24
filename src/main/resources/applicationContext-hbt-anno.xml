@@ -35,9 +35,10 @@
     <bean id="hibernateTemplate" class="org.springframework.orm.hibernate4.HibernateTemplate"
           p:sessionFactory-ref="sessionFactory"/>
 
+    <!--事务管理器-->
     <bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager"
           p:sessionFactory-ref="sessionFactory"/>
-
+    <!--扫描带注解的事务，如果事务管理器的id是transactionManager，则此处可以省略transaction-manager-->
     <tx:annotation-driven transaction-manager="transactionManager" />
 
 </beans>
