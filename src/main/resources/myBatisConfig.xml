@@ -3,12 +3,18 @@
         PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
-    <settings>
+    <!--方式二：列出所有实体的方式-->
+    <!--<settings>
         <setting name="lazyLoadingEnabled" value="false" />
     </settings>
     <typeAliases>
         <typeAlias alias="Forum" type="com.smart.domain.Forum" />
         <typeAlias alias="Topic" type="com.smart.domain.Topic" />
         <typeAlias alias="Post" type="com.smart.domain.Post" />
+    </typeAliases>-->
+
+    <!--方式二：包扫描方式定义别名，以便在mybatis配置文件中使用-->
+    <typeAliases>
+        <package name="com.smart.domain" />
     </typeAliases>
 </configuration>
