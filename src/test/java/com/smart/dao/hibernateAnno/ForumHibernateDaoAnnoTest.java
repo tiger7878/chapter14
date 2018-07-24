@@ -20,7 +20,7 @@ public class ForumHibernateDaoAnnoTest extends AbstractTestNGSpringContextTests 
     @Test
     public void testaddForum(){
         Forum forum=new Forum();
-        forum.setForumId(8);
+        forum.setForumId(9);
         forum.setForumName("c");
         forum.setForumDesc("c1");
         forumHibernateDao.addForum(forum);
