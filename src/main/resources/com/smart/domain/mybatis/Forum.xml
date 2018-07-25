@@ -30,6 +30,11 @@
         VALUES(#{forumId},#{forumName}, #{forumDesc})
     </insert>
 
+    <insert id="add" parameterType="Forum">
+        INSERT INTO t_forum(forum_id,forum_name,forum_desc)
+        VALUES(#{forumId},#{forumName}, #{forumDesc})
+    </insert>
+
     <update id="updateForum" parameterType="Forum">
         UPDATE t_forum f
         SET forum_name=#{forumName},forum_desc=#{forumDesc}

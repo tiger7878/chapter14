@@ -14,7 +14,7 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @Transactional
 @Service
-public class BbtForumSerive {
+public class BbtForumSerive extends BaseServiceImpl<ForumMybatisDao,Forum>{
 
     private ForumMybatisDao forumMybatisDao;
 

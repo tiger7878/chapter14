@@ -8,7 +8,7 @@ import java.util.List;
  * User: monkey
  * Date: 2018-07-24 14:53
  */
-public interface ForumMybatisDao {
+public interface ForumMybatisDao extends BaseDao<Forum> {
     void addForum(Forum forum);
     void updateForum(Forum forum);
     Forum getForum(int forumId);

@@ -26,6 +26,14 @@ public class BbtForumSeriveTest extends AbstractTestNGSpringContextTests {
         bbtForumSerive.addForum(forum);
     }
 
+    @Test
+    public void demo2(){
+        Forum forum=new Forum();
+        forum.setForumName("f");
+        forum.setForumDesc("ff");
+
+        bbtForumSerive.add(forum);
+    }
 
 
 }
