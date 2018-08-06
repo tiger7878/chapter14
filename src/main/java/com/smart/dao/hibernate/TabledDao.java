@@ -13,7 +13,7 @@ import java.util.List;
 public class TabledDao extends BaseDao {
 
     public List<Tabled> getListByFlag(int flag){
-        return (List<Tabled>) getHibernateTemplate().find("from Tabled t where t.numFlag=? ORDER BY t.id DESC",flag);
+        return (List<Tabled>) getHibernateTemplate().find("from Tabled t where t.numFlag=? ORDER BY t.numValue asc",flag);
     }
 
 }
